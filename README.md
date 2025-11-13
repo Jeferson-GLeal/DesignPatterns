@@ -55,12 +55,3 @@ Os padrões foram consolidados no livro **"Design Patterns: Elements of Reusable
 
 📘 **Referência:**  
 *Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John – Design Patterns: Elements of Reusable Object-Oriented Software (1994).*
-
-
----
-
-## 💬 Conclusão
-Os **23 Design Patterns do GoF** continuam sendo fundamentais no ecossistema Java.  
-Eles fornecem soluções reutilizáveis e comprovadas para problemas recorrentes,  
-servindo de base para frameworks modernos como **Spring, Hibernate e Jakarta EE**.  
-
