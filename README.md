@@ -7,51 +7,44 @@ Os padrões foram consolidados no livro **"Design Patterns: Elements of Reusable
 
 ---
 
-### 🏗️ **1. Padrões Criacionais**
-> Focam em **como os objetos são criados**, garantindo flexibilidade e controle sobre o processo de instanciação.
-
-| Padrão | Descrição |
-|--------|------------|
-| **Singleton** | Garante que exista apenas uma instância de uma classe e fornece um ponto global de acesso a ela. |
-| **Factory Method** | Define uma interface para criar objetos, mas permite que as subclasses decidam qual classe instanciar. |
-| **Abstract Factory** | Permite criar famílias de objetos relacionados sem especificar suas classes concretas. |
-| **Builder** | Separa a construção complexa de um objeto da sua representação final. |
-| **Prototype** | Cria novos objetos copiando (clonando) uma instância existente. |
+## 🔨 Padrões de Criação
+| Padrão             | Responsabilidade Principal | Exemplo em Java / Framework |
+|--------------------|----------------------------|-----------------------------|
+| **Singleton**      | Garantir única instância global | `Runtime.getRuntime()`, Spring Beans |
+| **Factory Method** | Delegar criação de objetos para subclasses | `Calendar.getInstance()`, Spring `BeanFactory` |
+| **Abstract Factory** | Criar famílias de objetos relacionados | GUI Toolkits, `DocumentBuilderFactory` |
+| **Builder**        | Construção passo a passo de objetos complexos | `StringBuilder`, `HttpRequest.Builder` |
+| **Prototype**      | Criar novos objetos copiando instâncias existentes | `clone()` em Java |
 
 ---
 
-### 🧩 **2. Padrões Estruturais**
-> Lidam com **a composição de classes e objetos**, garantindo estruturas flexíveis e reutilizáveis.
-
-| Padrão | Descrição |
-|--------|------------|
-| **Adapter** | Permite que classes com interfaces incompatíveis trabalhem juntas. |
-| **Bridge** | Desacopla uma abstração da sua implementação, permitindo que ambas evoluam independentemente. |
-| **Composite** | Permite tratar objetos individuais e composições de objetos de forma uniforme. |
-| **Decorator** | Adiciona comportamentos a um objeto dinamicamente, sem alterar sua estrutura original. |
-| **Facade** | Fornece uma interface simplificada para um conjunto complexo de classes ou subsistemas. |
-| **Flyweight** | Otimiza o uso de memória compartilhando objetos semelhantes. |
-| **Proxy** | Cria um substituto ou representante para controlar o acesso a um objeto real. |
+## 🏗️ Padrões Estruturais
+| Padrão             | Responsabilidade Principal | Exemplo em Java / Framework |
+|--------------------|----------------------------|-----------------------------|
+| **Adapter**        | Converter interface para outra esperada | `InputStreamReader` |
+| **Bridge**         | Separar abstração da implementação | JDBC Drivers |
+| **Composite**      | Compor objetos em estruturas hierárquicas | `java.awt.Container` |
+| **Decorator**      | Adicionar responsabilidades dinamicamente | `BufferedReader` envolvendo `FileReader` |
+| **Facade**         | Fornecer interface simplificada para subsistemas | `javax.faces.context.FacesContext` |
+| **Flyweight**      | Compartilhar objetos para eficiência | `Integer.valueOf()` cache |
+| **Proxy**          | Controlar acesso a um objeto | Hibernate Lazy Loading, `java.lang.reflect.Proxy` |
 
 ---
 
-### 🔁 **3. Padrões Comportamentais**
-> Focam em **como os objetos interagem e se comunicam** entre si, definindo responsabilidades e fluxos de execução.
-
-| Padrão | Descrição |
-|--------|------------|
-| **Chain of Responsibility** | Encadeia objetos para processar uma solicitação até que um deles a trate. |
-| **Command** | Encapsula uma solicitação como um objeto, permitindo desfazer e refazer operações. |
-| **Interpreter** | Define uma gramática e um interpretador para expressões em uma linguagem específica. |
-| **Iterator** | Fornece uma maneira de percorrer elementos de uma coleção sem expor sua representação interna. |
-| **Mediator** | Centraliza a comunicação entre objetos, reduzindo dependências diretas entre eles. |
-| **Memento** | Permite capturar e restaurar o estado interno de um objeto sem violar o encapsulamento. |
-| **Observer** | Define uma dependência de um-para-muitos, notificando automaticamente os observadores quando o estado muda. |
-| **State** | Permite que um objeto altere seu comportamento quando seu estado interno muda. |
-| **Strategy** | Define uma família de algoritmos e permite alterná-los dinamicamente. |
-| **Template Method** | Define o esqueleto de um algoritmo, permitindo que subclasses implementem etapas específicas. |
-| **Visitor** | Separa um algoritmo da estrutura de objetos sobre a qual ele opera. |
-
+## 🔄 Padrões Comportamentais
+| Padrão             | Responsabilidade Principal | Exemplo em Java / Framework |
+|--------------------|----------------------------|-----------------------------|
+| **Chain of Responsibility** | Passar requisição por uma cadeia de handlers | `Servlet Filters` |
+| **Command**        | Encapsular requisições como objetos | `Runnable`, `ExecutorService` |
+| **Interpreter**    | Interpretar gramáticas e linguagens | `Pattern` e `Matcher` (Regex) |
+| **Iterator**       | Acessar elementos sequencialmente sem expor estrutura | `Iterator` em `Collections` |
+| **Mediator**       | Centralizar comunicação entre objetos | `java.util.Timer` |
+| **Memento**        | Capturar e restaurar estado interno | `Serializable` |
+| **Observer**       | Notificação automática de mudanças | `PropertyChangeListener`, eventos Swing |
+| **State**          | Alterar comportamento conforme estado interno | `Thread` (NEW, RUNNABLE, BLOCKED) |
+| **Strategy**       | Encapsular algoritmos e permitir alternância | `Comparator` em `Collections.sort()` |
+| **Template Method**| Definir esqueleto de algoritmo e permitir variações | `AbstractList`, `HttpServlet` |
+| **Visitor**        | Separar algoritmos da estrutura de objetos | `FileVisitor` em NIO |
 ---
 
 ### 💬 **Resumo**
@@ -62,3 +55,12 @@ Os padrões foram consolidados no livro **"Design Patterns: Elements of Reusable
 
 📘 **Referência:**  
 *Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John – Design Patterns: Elements of Reusable Object-Oriented Software (1994).*
+
+
+---
+
+## 💬 Conclusão
+Os **23 Design Patterns do GoF** continuam sendo fundamentais no ecossistema Java.  
+Eles fornecem soluções reutilizáveis e comprovadas para problemas recorrentes,  
+servindo de base para frameworks modernos como **Spring, Hibernate e Jakarta EE**.  
+
